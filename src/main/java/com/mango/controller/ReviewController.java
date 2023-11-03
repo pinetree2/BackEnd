@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.RestController;
 @CrossOrigin
 @RequiredArgsConstructor
 @Tag(name = "Review", description = "리뷰 관련 API")
-public class ReviewControllerImpl {
+public class ReviewController {
     public String enrollReview() {
         return null;
     }

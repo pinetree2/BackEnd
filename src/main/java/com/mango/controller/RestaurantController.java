@@ -11,13 +11,15 @@ import org.springframework.web.bind.annotation.RestController;
 @CrossOrigin
 @RequiredArgsConstructor
 @Tag(name = "Restaurant", description = "식당 관련 API")
-public class RestaurantControllerImpl {
+public class RestaurantController {
     @PostMapping("/api/restaurant/register")
     public String enrollRestaurant() {
         return null;
     }
+
     @GetMapping("api/restaurant/detail")
     public String getRestaurantDetail() {
         return null;
     }
 }
+
