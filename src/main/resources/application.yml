@@ -20,6 +20,12 @@ server:
   error:
     include-message: always
 
+
+jwt:
+  header: Authorization
+  secret : 3lXdQ+A7/YyqtnBLngwabsum7YYlqMxOi2CJy/1xsWpptuFUq+3jaA2OAwO1ub2CN97qx8u0hta61QdhtF/R5A==
+  expiration : 86400
+
 # Swagger springdoc-ui Configuration
 #springdoc:
 #  packages-to-scan: com.test.demo
@@ -36,7 +42,3 @@ server:
 #  cache:
 #    disabled: true
 
-jwt:
-  header: Authorization
-  secret : 3lXdQ+A7/YyqtnBLngwabsum7YYlqMxOi2CJy/1xsWpptuFUq+3jaA2OAwO1ub2CN97qx8u0hta61QdhtF/R5A==
-  expiration : 86400
