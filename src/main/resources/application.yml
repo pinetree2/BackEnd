@@ -20,6 +20,8 @@ server:
   error:
     include-message: always
 
+kakao:
+  key: 3b71afcfaf0fe7f58b9e6d71ed96e5de
 # Swagger springdoc-ui Configuration
 #springdoc:
 #  packages-to-scan: com.test.demo
