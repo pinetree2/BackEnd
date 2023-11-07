@@ -6,7 +6,7 @@ import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-@CrossOrigin("http://34.83.15.61:8080")
+@CrossOrigin("http://34.83.15.61:3000")
 @RequiredArgsConstructor
 @Tag(name = "Review", description = "리뷰 관련 API")
 public class ReviewController {
