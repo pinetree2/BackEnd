@@ -11,4 +11,5 @@ public class SearchResponseDto {
     private String placeName;
     private String categoryName;
     private String imageUrl;
+    private String address_name;
 }
