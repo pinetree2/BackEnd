@@ -12,4 +12,6 @@ public class SearchResponseDto {
     private String categoryName;
     private String imageUrl;
     private String address_name;
+    private Double x;
+    private Double y;
 }

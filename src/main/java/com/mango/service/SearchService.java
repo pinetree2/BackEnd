@@ -119,6 +119,8 @@ public class SearchService {
                 .placeName(r.getPlace_name())
                 .categoryName(splitCategoryName(r.getCategory_name()))
                 .address_name(r.getAddress_name())
+                .x(r.getX())
+                .y(r.getY())
                 .build())
             .collect(Collectors.toList());
     }
