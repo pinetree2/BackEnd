@@ -1,11 +1,13 @@
 package com.mango.entity;
 
 import jakarta.persistence.*;
+import lombok.Builder;
 import lombok.Getter;
 import lombok.RequiredArgsConstructor;
 
 @Entity
 @Getter
+@Builder
 @RequiredArgsConstructor
 @Table(name = "ReviewPicture")
 public class ReviewPicture {
