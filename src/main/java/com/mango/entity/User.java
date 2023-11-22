@@ -17,19 +17,10 @@ public class User implements UserDetails{
     @Id
     @GeneratedValue(strategy= GenerationType.IDENTITY)
     private Long id;
-
-
-
-    @Column(name = "email", unique = true)
-    private String email;
-
-    @Column(name = "nickname")
-    private String nickname;
-
-    @Column(name = "password")
-    private String password;
-
-
+    @Column(name = "kakaoId", nullable = false, unique = true)
+    private Long kakaoId;
+    @Column(name = "name")
+    private String name;
     //mappedBy 쓸때는 지정한 변수명
     @OneToMany(mappedBy = "user")
     private List<ReviewLike> reviewLikeList;
@@ -38,11 +29,10 @@ public class User implements UserDetails{
     private List<SearchLog> searchLogList;
 
     @Builder
-    public User(Long id, String email,String nickname, String password, List<ReviewLike> reviewLikeList, List<SearchLog> searchLogList) {
+    public User(Long id, Long kakaoId,String name, List<ReviewLike> reviewLikeList, List<SearchLog> searchLogList) {
         this.id = id;
-        this.email = email;
-        this.nickname = nickname;
-        this.password = password;
+        this.kakaoId = kakaoId;
+        this.name = name;
         this.reviewLikeList = reviewLikeList;
         this.searchLogList = searchLogList;
     }
@@ -53,8 +43,13 @@ public class User implements UserDetails{
     }
 
     @Override
+    public String getPassword() {
+        return null;
+    }
+
+    @Override
     public String getUsername() {
-        return String.valueOf(email);
+        return String.valueOf(id);
     }
 
     @Override

@@ -6,7 +6,6 @@ import lombok.*;
 @Setter
 @NoArgsConstructor
 public class UserSignUpDto {
-    String email; // unique id
+    String email;
     String nickName;
-    String password;
 }

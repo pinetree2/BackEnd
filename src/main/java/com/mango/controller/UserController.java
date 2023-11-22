@@ -17,27 +17,24 @@ import org.springframework.web.bind.annotation.*;
 public class UserController{
     private final UserService userService;
 
-    @Value("${jwt.expiration}")
-    private Long expireTime;
-    @Operation(summary = "회원가입")
-    @PostMapping("/api/user/join")
-    public ResponseEntity join(@RequestBody UserSignUpDto userSignUpDto) {
-        userService.signUp(userSignUpDto.getEmail(), userSignUpDto.getPassword(), userSignUpDto.getNickName());
-        return ResponseEntity.ok().build();
-    }
+//    @Value("${jwt.expiration}")
+//    private Long expireTime;
+//    @Operation(summary = "회원가입")
+//    @PostMapping("/api/user/join")
+//    public ResponseEntity join(@RequestBody UserSignUpDto userSignUpDto) {
+//        userService.signUp(userSignUpDto.getEmail(), userSignUpDto.getPassword(), userSignUpDto.getNickName());
+//        return ResponseEntity.ok().build();
+//    }
 
-    @Operation(summary = "로그인")
-    @PostMapping("/api/user/login")
-    public ResponseEntity login(@RequestBody UserSignUpDto userSignUpDto) {
-        String token = userService.login(userSignUpDto.getEmail(), userSignUpDto.getPassword());
-        TokenDto tokenDto = new TokenDto();
-        tokenDto.setAccessToken(token);
-        tokenDto.setGrantType("Bearer");
-        tokenDto.setAccessTokenExpiresIn(String.valueOf(expireTime));
-        return ResponseEntity.ok(tokenDto);
-    }
-
-
-
+//    @Operation(summary = "로그인")
+//    @PostMapping("/api/user/login")
+//    public ResponseEntity login(@RequestBody UserSignUpDto userSignUpDto) {
+//        String token = userService.login(userSignUpDto.getEmail());
+//        TokenDto tokenDto = new TokenDto();
+//        tokenDto.setAccessToken(token);
+//        tokenDto.setGrantType("Bearer");
+//        tokenDto.setAccessTokenExpiresIn(String.valueOf(expireTime));
+//        return ResponseEntity.ok(tokenDto);
+//    }
 }
 
