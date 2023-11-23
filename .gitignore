@@ -5,7 +5,6 @@ build/generated
 build/resources
 build/tmp
 build/resolvedMainClassName
-
 !gradle/wrapper/gradle-wrapper.jar
 !**/src/main/**/build/
 !**/src/test/**/build/
@@ -37,6 +36,8 @@ out/
 /dist/
 /nbdist/
 /.nb-gradle/
+
+*.yml
 
 ### VS Code ###
 .vscode/

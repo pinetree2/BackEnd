@@ -14,7 +14,7 @@ spring:
         format_sql: true
 
   #  profiles:
-  #    include: mysql
+  #  include: mysql
   mvc:
     pathmatch:
       matching-strategy: ant_path_matcher
@@ -30,6 +30,8 @@ spring:
         bucket: durian-storage
 kakao:
   key: 3b71afcfaf0fe7f58b9e6d71ed96e5de
+  auth:
+    clientId: ${CLIENT_ID}
 
 kakao:
   key: 3b71afcfaf0fe7f58b9e6d71ed96e5de
@@ -44,6 +46,7 @@ jwt:
   header: Authorization
   secret : 3lXdQ+A7/YyqtnBLngwabsum7YYlqMxOi2CJy/1xsWpptuFUq+3jaA2OAwO1ub2CN97qx8u0hta61QdhtF/R5A==
   expiration : 86400
+
 
 
 # Swagger springdoc-ui Configuration

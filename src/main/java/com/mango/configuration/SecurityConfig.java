@@ -84,7 +84,6 @@ public class SecurityConfig {
                 .csrf(AbstractHttpConfigurer::disable); // csrf 비활성화
 
         http.addFilterBefore(new JwtFilter(jwtTokenProvider), UsernamePasswordAuthenticationFilter.class);
-
         return http.build();
     }
 }
