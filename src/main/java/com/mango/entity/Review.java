@@ -1,14 +1,15 @@
 package com.mango.entity;
 
 import jakarta.persistence.*;
-import lombok.Builder;
-import lombok.Getter;
-import lombok.RequiredArgsConstructor;
+import lombok.*;
+
+import java.util.List;
 
 @Entity
-@Getter
 @Builder
+@Getter
 @RequiredArgsConstructor
+@AllArgsConstructor
 @Table(name = "Review")
 public class Review {
     @Id
@@ -20,10 +21,13 @@ public class Review {
     private Restaurant restaurant;
 
     @Column(name = "Score")
-    private boolean score;
+    private Boolean score;
 
     @Column(name = "Review_Contents")
     private String reviewContents;
+
+    @OneToMany(mappedBy = "review", cascade = CascadeType.ALL)
+    private List<ReviewPicture> reviewPictures;
 
 
 }
