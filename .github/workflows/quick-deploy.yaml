@@ -48,6 +48,7 @@ jobs:
           spring.datasource.url: ${{ secrets.DB_HOST }}
           spring.datasource.username: ${{ secrets.DB_USERNAME }}
           spring.datasource.password: ${{ secrets.DB_PASSWORD }}
+          spring.cloud.gcp.credentials.location: ${{ secrets.GCP_CREDENTIALS_LOCATION }}
           spring.auth.clientId: ${{ secrets.AUTH_RESTAPI_KEY }}
 
       # Gradle의 사용권한 셋팅
